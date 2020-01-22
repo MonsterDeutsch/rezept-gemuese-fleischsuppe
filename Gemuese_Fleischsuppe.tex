@@ -4,14 +4,22 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage[tmargin=2cm,lmargin=3cm,rmargin=3cm,bmargin=1.5cm]{geometry}
+\usepackage{contour}
 
 %opening
 \title{Gemüse-Fleischsuppe}
 \author{Noemi Borer}
 
+%config contour
+\contourlength{0.8pt}
+
 %custom commands
 \newcommand{\zutat}[1]{\textbf{#1}}
-\setkomafont{section}{\huge\underline}
+\newcommand{\ul}[1]{%
+	\underline{\phantom{\smash{#1}}}%
+	\llap{\contour{white}{#1}}%
+}
+\setkomafont{section}{\huge\ul}
 
 
 \begin{document}
